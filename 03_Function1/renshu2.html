@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>変数の衝突テスト</title>
+    <script src="main copy 2.js"></script>
+</head>
+<body>
+
+    <p id="p1">1つ目の内容（初期値）</p>
+    <input type="button" value="p1を変更" onclick="click1()">
+
+    <p id="p2">2つ目の内容（初期値）</p>
+    <input type="button" value="p2を変更" onclick="click2()">
+
+    <br><br>
+
+    <input type="button" value="リセット2（変数で戻す）" onclick="reset_2()">
+    <p>↑ これが正しく動かなくなります</p>
+
+    <hr>
+
+    <h3>追加機能：ユーザーログイン</h3>
+    <p id="user-area">ゲストさん</p>
+    <input type="button" value="ユーザー名を表示" onclick="showUserName()">
+
+
+    <input type="button" value="テスト１" onclick="test1()">
+    <input type="button" value="テスト２" onclick="test2()">
+
+    <p><img src="image.jpg"style="border:1px solid #666;padding:3px;max-width:600px;"></p>
+    <p>
+        - let使ったとしても、範囲外なら上書きしちゃうってことかぁ<br>
+        - let は「画面の結果」を守るのではなく、**「計算中のデータが他人に汚染される事故」**を防ぐためにあります。
+    </p>
+</body>
+</html>
